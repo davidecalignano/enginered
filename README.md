@@ -18,7 +18,6 @@ The list of tech blogs from the engineers who code the best companies on interne
 | github            | http://githubengineering.com/            |
 | pinterest         | http://engineering.pinterest.com         |
 | facebook          | https://code.facebook.com/               |
-| heroku            | http://engineering.heroku.com            |
 | envato            | http://webuild.envato.com/               |
 | vine              | http://engineering.vine.co/              |
 | trivago           | http://tech.trivago.com/                 |
