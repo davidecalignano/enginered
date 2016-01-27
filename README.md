@@ -26,3 +26,4 @@ The list of tech blogs from the engineers who code the best companies on interne
 | heroku            | http://engineering.heroku.com/           |
 | zalando           | https://tech.zalando.com/blog/           |
 | dailymotion       | http://engineering.dailymotion.com/      |
+| pubnub            | http://pubnub.com/blog/                  |
