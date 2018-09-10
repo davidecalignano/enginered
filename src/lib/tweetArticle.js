@@ -9,6 +9,5 @@ var client = new Twitter({
 
 module.exports = (article) => {
   const status = `${article.title} #${article.company_name} ${article.link}`
-  // return new Promise(resolve => resolve(true))
   return client.post('statuses/update', { status })
 }

@@ -16,7 +16,7 @@ router.get('/*', async (req, res) => {
     feed_url: 'https://enginered.herokuapp.com/rss',
     site_url: 'https://twitter.com/enginered_',
     generator: 'Enginered',
-    webMaster: 'info@engine.red',
+    webMaster: 'engine.red.blogs@gmail.com',
     language: 'en'
   });
 

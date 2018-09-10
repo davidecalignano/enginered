@@ -9,7 +9,6 @@
   "scripts": {
     "start": "node src/index.js",
     "start:dev": "node -r dotenv/config src/index.js",
-    "deploy": "git push heroku master",
     "test-job-companies": "node src/jobs/fetchAndStoreAndTweet",
     "test-job-companies-live": "heroku run node src/jobs/fetchAndStoreAndTweet",
     "test-local-run": "heroku local:run node"
@@ -29,7 +28,10 @@
   "keywords": [
     "enginered",
     "feed",
-    "rss"
+    "rss",
+    "tech",
+    "blogs",
+    "engineering"
   ],
   "license": "MIT",
   "devDependencies": {
