@@ -1,0 +1,8 @@
+{
+  "name": "Enginered",
+  "description": "The best tech post from the best tech companies",
+  "repository": "https://github.com/heroku/node-js-getting-started",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["enginered", "feeds", "rss"],
+  "image": "heroku/nodejs"
+}
