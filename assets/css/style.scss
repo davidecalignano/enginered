@@ -11,8 +11,15 @@ footer {
   color: #eaeaea;
 }
 
-header, .wrapper {
+header {
   background: white;
+  border-bottom: 1px solid #ffc3c3;
+}
+
+.wrapper {
+  background: white;
+  box-shadow: rgba(0,0,0,0.2) 0 0 0 1px, rgba(0,0,0,0.45) 0 2px 4px;
+  border-radius: 3px;
 }
 
 header ul {
@@ -25,8 +32,4 @@ header ul li {
 
 header h1 {
   color: red;
-}
-
-header {
-  border-bottom: 1px solid #ffc3c3;
 }
