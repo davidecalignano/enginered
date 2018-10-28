@@ -15,6 +15,10 @@ header, .wrapper {
   background: white;
 }
 
-header ul li {
+header ul {
   background: red;
+}
+
+header ul li {
+  border-right: 0
 }
