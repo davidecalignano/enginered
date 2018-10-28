@@ -1,0 +1,20 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+html {
+  background: red;
+}
+
+footer {
+  color: #eaeaea;
+}
+
+header, .wrapper {
+  background: white;
+}
+
+header ul li {
+  background: red;
+}
