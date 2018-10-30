@@ -3,3 +3,13 @@ layout: default
 title: Home
 ---
 <h1>{{ "Hello World!" | downcase }}</h1>
+
+<ul>
+  {% for state in site.data.status %}
+  <li>
+    <span>
+      {{ state.name }}
+    </span>
+  </li>
+  {% endfor %}
+</ul>

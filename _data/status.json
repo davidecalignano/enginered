@@ -1,0 +1,9 @@
+{
+  "companies": [{
+    "name": "facebook",
+    "status": "ok"
+  },{
+    "name": "github",
+    "status": "ok"
+  }]  
+}
