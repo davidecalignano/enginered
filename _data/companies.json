@@ -2,26 +2,32 @@
   "companies": [{
     "name": "facebook",
     "updated": "123123123",
+    "url": "http://url",
     "status": "200"
   },{
     "name": "github",
     "updated": "123123123",
+    "url": "http://url",
     "status": "400"
   },{
     "name": "github",
     "updated": "123123123",
+    "url": "http://url",
     "status": "400"
   },{
     "name": "github",
     "updated": "123123123",
+    "url": "http://url",
     "status": "400"
   },{
     "name": "github",
     "updated": "123123123",
+    "url": "http://url",
     "status": "400"
   },{
     "name": "github",
     "updated": "123123123",
+    "url": "http://url",
     "status": "400"
   }]  
 }

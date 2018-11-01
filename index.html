@@ -8,14 +8,16 @@ title: Home
 <table>
   <tr>
     <th>Company</th>
+    <th>Rss</th>
     <th>Updated</th>
     <th>Status</th>
   </tr>
   {% for company in site.data.companies.companies %}
   <tr>
-    <td>{{ company.name }}</td>
+    <td><b>{{ company.name }}</b></td>
+    <td><a href="{{ company.url }}">RSS</td>
     <td>{{ company.updated }}</td>
-    <td>{{ company.status }}</td>
+    <td><img src="/assets/img/green.svg" alt="ok" width="16" height="16"></td>
   </tr>
   {% endfor %}
 </table>
