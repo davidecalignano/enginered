@@ -2,14 +2,20 @@
 layout: default
 title: Home
 ---
-<h1>{{ "Hello World!" | downcase }}</h1>
+<h3>Status</h3>
 
-<ul>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Updated</th>
+    <th>Status</th>
+  </tr>
   {% for company in site.data.companies.companies %}
-  <li>
-    <span>
-      {{ company.name }}
-    </span>
-  </li>
+  <tr>
+    <td>{{ company.name }}</td>
+    <td>{{ company.updated }}</td>
+    <td>{{ company.status }}</td>
+  </tr>
   {% endfor %}
-</ul>
+</table>

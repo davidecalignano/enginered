@@ -1,9 +1,27 @@
 {
   "companies": [{
     "name": "facebook",
-    "status": "ok"
+    "updated": "123123123",
+    "status": "200"
   },{
     "name": "github",
-    "status": "ok"
+    "updated": "123123123",
+    "status": "400"
+  },{
+    "name": "github",
+    "updated": "123123123",
+    "status": "400"
+  },{
+    "name": "github",
+    "updated": "123123123",
+    "status": "400"
+  },{
+    "name": "github",
+    "updated": "123123123",
+    "status": "400"
+  },{
+    "name": "github",
+    "updated": "123123123",
+    "status": "400"
   }]  
 }
