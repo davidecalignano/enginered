@@ -13,6 +13,8 @@ const githubConfig = {
   branch: process.env.GITHUB_BRANCH
 }
 
+
+
 function generateGitHubJWT() {
   if (!githubConfig.privateKey) {
     return new Error('Missing Github Private key');;
@@ -23,7 +25,7 @@ function generateGitHubJWT() {
     exp: Math.floor(Date.now() / 1000) + 100,
     iss: 20154
   }
-  console.log("jwt generated")
+
   return jwt.sign(payload, githubConfig.privateKey, { algorithm: 'RS256' });
 }
 
@@ -32,8 +34,6 @@ function generateGitHubAccessToken(jwt) {
     return new Error('Missing JWT');
   }
 
-  console.log("start fetch access token", jwt)
-
   return fetch(`https://api.github.com/app/installations/${githubConfig.installationId}/access_tokens`, {
     method: 'POST',
     headers: {
@@ -41,14 +41,14 @@ function generateGitHubAccessToken(jwt) {
       'Accept': 'application/vnd.github.machine-man-preview+json'
     }
   }).then(response => response.json())
-    .then(response => { console.log("access token generated", response.token); return response.token}).catch(console.log.bind(console))
+    .then(response => response.token)
 }
 
 function generateGitHubStaticPages(token, data) {
   if (!token) {
     return new Error('Missing Access Token');;
   }
-  console.log("processing pages");
+
   const publisher = new GitHubPublisher(token, githubConfig.user, githubConfig.repo, githubConfig.branch);
 
   return new Promise((resolve, reject) => {
@@ -56,13 +56,7 @@ function generateGitHubStaticPages(token, data) {
       publisher.publish(githubConfig.pageToCommit, JSON.stringify(data), {
         message: githubConfig.commitMessage,
         sha: file.sha
-      }).then(result => {
-        console.log("result generated", result)
-        if(result)
-          resolve(result)
-        else
-          reject()
-      })
+      }).then(result => result ? resolve(result) : reject())
     })
   })
 }
