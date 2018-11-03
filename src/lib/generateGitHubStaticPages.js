@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 const githubConfig = {
   pageToCommit: '_data/companies.json',
   commitMessage: 'Update',
-  privateKey: process.env.GITHUB_PRIVATE_KEY,
+  // privateKey: process.env.GITHUB_PRIVATE_KEY,
   installationId: process.env.GITHUB_INSTALLATION_ID,
   user: process.env.GITHUB_USER,
   repo: process.env.GITHUB_REPO,
@@ -16,7 +16,7 @@ const githubConfig = {
 
 
 function generateGitHubJWT() {
-  if (!githubConfig.privateKey) {
+  if (!process.env.GITHUB_PRIVATE_KEY) {
     return new Error('Missing Github Private key');;
   }
 
@@ -26,7 +26,7 @@ function generateGitHubJWT() {
     iss: 20154
   }
 
-  return jwt.sign(payload, githubConfig.privateKey, { algorithm: 'RS256' });
+  return jwt.sign(payload, process.env.GITHUB_PRIVATE_KEY, { algorithm: 'RS256' });
 }
 
 function generateGitHubAccessToken(jwt) {
