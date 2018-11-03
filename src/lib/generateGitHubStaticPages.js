@@ -32,6 +32,8 @@ function generateGitHubAccessToken(jwt) {
     return new Error('Missing JWT');
   }
 
+  console.log("start fetch access token", jwt)
+
   return fetch(`https://api.github.com/app/installations/${githubConfig.installationId}/access_tokens`, {
     method: 'POST',
     headers: {
