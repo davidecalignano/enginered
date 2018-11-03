@@ -72,7 +72,7 @@ const generateGithubStaticPages = require('../lib/generateGitHubStaticPages')
         ]
     }
     // test
-    generateGithubStaticPages(mockData);
+    const  staticPages = await generateGithubStaticPages(mockData);
 
     // PRINT REPORT
     logReport({

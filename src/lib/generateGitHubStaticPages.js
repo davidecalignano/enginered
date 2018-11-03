@@ -60,6 +60,7 @@ function generateGitHubStaticPages(token, data) {
 }
 
 module.exports = (data) => {
+  console.log(process.env.GITHUB_PRIVATE_KEY)
   const jwt = generateGitHubJWT();
   return generateGitHubAccessToken(jwt).then(token =>
     generateGitHubStaticPages(token, data)
