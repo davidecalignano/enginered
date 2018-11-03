@@ -72,14 +72,14 @@ const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
         ]
     }
     // test
-    const  staticPages = await generateGithubStaticPages(mockData);
-    console.log(staticPages)
+    const  staticPagesResult = await generateGithubStaticPages(mockData);
 
     // PRINT REPORT
     logReport({
         totalFetchedCompanies: storedArticlesResponse.length,
         totalFetchedArticles: storedArticlesResponse.reduce((sum, cur) => sum + cur.length, 0),
-        storedArticles: articlesWithCompanyName
+        storedArticles: articlesWithCompanyName,
+        staticPagesResult
     })
 
     // END JOB
