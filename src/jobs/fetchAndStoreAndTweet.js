@@ -5,6 +5,7 @@ const mapCompanyToArticles = require('../lib/mapCompanyToArticles');
 const getCompanyWithArticles = require('../lib/fetchFeed');
 const storeArticle = require('../lib/storeArticle');
 const logReport = require('../lib/logReport');
+const generateGithubStaticPages = require('../lib/generateGitHubStaticPages')
 
 (async () => {
 
@@ -19,7 +20,7 @@ const logReport = require('../lib/logReport');
 
     // FETCH ALL COMPANY ARTICLES
     const companiesWithArticles = await Promise.all(companies.map(getCompanyWithArticles))
-    
+
     // UPDATE COMPANY STATUS AND DATE
     await Promise.all(companiesWithArticles.map(updateCompany))
 
@@ -34,6 +35,44 @@ const logReport = require('../lib/logReport');
 
     // POST ARTICLES TO TWITTER
     await Promise.all(articlesWithCompanyName.map(tweetArticle))
+
+    // GENEREATE STATIC PAGES
+    const mockData = {
+        "companies": [
+            {
+                "name": "facebook",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "facebook",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "github",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "facebook",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "twitter",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            }
+        ]
+    }
+    // test
+    generateGithubStaticPages(mockData);
 
     // PRINT REPORT
     logReport({
