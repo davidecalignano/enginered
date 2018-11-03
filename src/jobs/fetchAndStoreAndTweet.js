@@ -5,7 +5,7 @@ const mapCompanyToArticles = require('../lib/mapCompanyToArticles');
 const getCompanyWithArticles = require('../lib/fetchFeed');
 const storeArticle = require('../lib/storeArticle');
 const logReport = require('../lib/logReport');
-const generateGitHubStaticPages = require('../lib/generateGitHubStaticPages')
+const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
 
 (async () => {
 
@@ -72,7 +72,7 @@ const generateGitHubStaticPages = require('../lib/generateGitHubStaticPages')
         ]
     }
     // test
-    const  staticPages = await generateGitHubStaticPages(mockData);
+    const  staticPages = await generateGithubStaticPages(mockData);
     console.log(staticPages)
 
     // PRINT REPORT
