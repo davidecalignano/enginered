@@ -61,12 +61,13 @@ function generateGitHubStaticPages(token, data) {
   })
 }
 
-module.exports = (data) => {
+function startProcess(data) {
   return new Promise((resolve, reject) => {
     const jwt = generateGitHubJWT();
     return generateGitHubAccessToken(jwt).then(token =>
       generateGitHubStaticPages(token, data).then(result => resolve(result))
     )
   })
-  
-};
+}
+
+module.exports = startProcess;
