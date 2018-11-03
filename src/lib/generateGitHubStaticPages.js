@@ -41,7 +41,7 @@ function generateGitHubAccessToken(jwt) {
       'Accept': 'application/vnd.github.machine-man-preview+json'
     }
   }).then(response => response.json())
-    .then(response => { console.log("access token generated", response.token); return response.token})
+    .then(response => { console.log("access token generated", response.token); return response.token}).catch(console.log.bind(console))
 }
 
 function generateGitHubStaticPages(token, data) {
