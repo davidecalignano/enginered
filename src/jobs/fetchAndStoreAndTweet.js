@@ -40,7 +40,7 @@ const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
     const mockData = {
         "companies": [
             {
-                "name": "facebook1",
+                "name": "facebook3",
                 "updated": "123123123",
                 "url": "http://url",
                 "status": "200"
