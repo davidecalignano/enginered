@@ -22,7 +22,7 @@ const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
     const companiesWithArticles = await Promise.all(companies.map(getCompanyWithArticles))
 
     // UPDATE COMPANY STATUS AND DATE
-    await Promise.all(companiesWithArticles.map(updateCompany))
+    const updatedCompanies = await Promise.all(companiesWithArticles.map(updateCompany))
 
     // STORE ALL COMPANY ARTICLES
     const storedArticlesResponse = await Promise.all(companiesWithArticles.map(storeArticle))
@@ -37,54 +37,7 @@ const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
     await Promise.all(articlesWithCompanyName.map(tweetArticle))
 
     // GENEREATE STATIC PAGES
-    const mockData = {
-        "companies": [
-            {
-                "name": "facebook6",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "facebook6",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "facebook6",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "facebook",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "github",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "facebook",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "twitter",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            }
-        ]
-    }
-    // // test
-    const  staticPagesResult = await generateGithubStaticPages(mockData);
+    const staticPagesResult = await generateGithubStaticPages({ companies: updatedCompanies });
 
     // PRINT REPORT
     logReport({

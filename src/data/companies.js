@@ -16,8 +16,9 @@ const getAllCompanies = async () => {
 const updateCompany = async (company) => {
   try {
     const client = await pool.connect()
-    await client.query(`UPDATE ${TABLE_COMPANIES} SET updated=$1, status=$2 WHERE id=$3`, [company.updated, company.status, company.id]);
+    const result = await client.query(`UPDATE ${TABLE_COMPANIES} SET updated=$1, status=$2 WHERE id=$3 RETURNING *`, [company.updated, company.status, company.id]);
     client.release();
+    return result.rows[0];
   } catch (err) {
     console.log(err);
   }
