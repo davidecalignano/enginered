@@ -22,10 +22,6 @@ title: Home
         {% company.status == "200" %}
         <img src="{{ site.url }}/enginered/assets/img/green.svg" alt="ok" width="16" height="16">
         {% endif %}
-        
-        {% company.status != "200" %}
-        <img src="{{ site.url }}/enginered/assets/img/red.svg" alt="error" width="16" height="16">
-        {% endif %}
     </td>
   </tr>
   {% endfor %}
