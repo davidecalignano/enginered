@@ -14,7 +14,7 @@ title: Home
   {% for company in site.data.companies.companies %}
   <tr>
     <td><b>{{ company.name }}</b></td>
-    <td><a href="{{ company.feed }}">RSS</td>
+    <td><a href="{{ company.feed }}" target="_blank">RSS</td>
     <td>{{ company.updated | date: "%-d %B %Y %R"}}</td>
     <td><img src="{{ site.url }}/enginered/assets/img/{% if company.status == '200' %}green{% else %}red{% endif %}.svg" alt="{{ company.status }}" width="16" height="16"></td>
   </tr>
