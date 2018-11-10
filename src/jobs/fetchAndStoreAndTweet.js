@@ -5,7 +5,7 @@ const mapCompanyToArticles = require('../lib/mapCompanyToArticles');
 const getCompanyWithArticles = require('../lib/fetchFeed');
 const storeArticle = require('../lib/storeArticle');
 const logReport = require('../lib/logReport');
-const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
+// const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
 
 (async () => {
 
@@ -37,49 +37,49 @@ const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
     await Promise.all(articlesWithCompanyName.map(tweetArticle))
 
     // GENEREATE STATIC PAGES
-    const mockData = {
-        "companies": [
-            {
-                "name": "facebook3",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "facebook",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "github",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "facebook",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            },
-            {
-                "name": "twitter",
-                "updated": "123123123",
-                "url": "http://url",
-                "status": "200"
-            }
-        ]
-    }
-    // test
-    const  staticPagesResult = await generateGithubStaticPages(mockData);
+    // const mockData = {
+    //     "companies": [
+    //         {
+    //             "name": "facebook3",
+    //             "updated": "123123123",
+    //             "url": "http://url",
+    //             "status": "200"
+    //         },
+    //         {
+    //             "name": "facebook",
+    //             "updated": "123123123",
+    //             "url": "http://url",
+    //             "status": "200"
+    //         },
+    //         {
+    //             "name": "github",
+    //             "updated": "123123123",
+    //             "url": "http://url",
+    //             "status": "200"
+    //         },
+    //         {
+    //             "name": "facebook",
+    //             "updated": "123123123",
+    //             "url": "http://url",
+    //             "status": "200"
+    //         },
+    //         {
+    //             "name": "twitter",
+    //             "updated": "123123123",
+    //             "url": "http://url",
+    //             "status": "200"
+    //         }
+    //     ]
+    // }
+    // // test
+    // const  staticPagesResult = await generateGithubStaticPages(mockData);
 
     // PRINT REPORT
     logReport({
         totalFetchedCompanies: storedArticlesResponse.length,
         totalFetchedArticles: storedArticlesResponse.reduce((sum, cur) => sum + cur.length, 0),
         storedArticles: articlesWithCompanyName,
-        staticPagesResult
+        staticPagesResult: false
     })
 
     // END JOB
