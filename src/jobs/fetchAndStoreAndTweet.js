@@ -37,49 +37,61 @@ const logReport = require('../lib/logReport');
     await Promise.all(articlesWithCompanyName.map(tweetArticle))
 
     // GENEREATE STATIC PAGES
-    // const mockData = {
-    //     "companies": [
-    //         {
-    //             "name": "facebook3",
-    //             "updated": "123123123",
-    //             "url": "http://url",
-    //             "status": "200"
-    //         },
-    //         {
-    //             "name": "facebook",
-    //             "updated": "123123123",
-    //             "url": "http://url",
-    //             "status": "200"
-    //         },
-    //         {
-    //             "name": "github",
-    //             "updated": "123123123",
-    //             "url": "http://url",
-    //             "status": "200"
-    //         },
-    //         {
-    //             "name": "facebook",
-    //             "updated": "123123123",
-    //             "url": "http://url",
-    //             "status": "200"
-    //         },
-    //         {
-    //             "name": "twitter",
-    //             "updated": "123123123",
-    //             "url": "http://url",
-    //             "status": "200"
-    //         }
-    //     ]
-    // }
+    const mockData = {
+        "companies": [
+            {
+                "name": "facebook6",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "facebook6",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "facebook6",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "facebook",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "github",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "facebook",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            },
+            {
+                "name": "twitter",
+                "updated": "123123123",
+                "url": "http://url",
+                "status": "200"
+            }
+        ]
+    }
     // // test
-    // const  staticPagesResult = await generateGithubStaticPages(mockData);
+    const  staticPagesResult = await generateGithubStaticPages(mockData);
 
     // PRINT REPORT
     logReport({
         totalFetchedCompanies: storedArticlesResponse.length,
         totalFetchedArticles: storedArticlesResponse.reduce((sum, cur) => sum + cur.length, 0),
         storedArticles: articlesWithCompanyName,
-        staticPagesResult: false
+        staticPagesResult
     })
 
     // END JOB
