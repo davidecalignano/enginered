@@ -5,7 +5,7 @@ const mapCompanyToArticles = require('../lib/mapCompanyToArticles');
 const getCompanyWithArticles = require('../lib/fetchFeed');
 const storeArticle = require('../lib/storeArticle');
 const logReport = require('../lib/logReport');
-// const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
+const generateGithubStaticPages = require('../lib/generateGitHubStaticPages');
 
 (async () => {
 
