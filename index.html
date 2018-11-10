@@ -16,13 +16,7 @@ title: Home
     <td><b>{{ company.name }}</b></td>
     <td><a href="{{ company.feed }}">RSS</td>
     <td>{{ company.updated | date: "%-d %B %Y %R"}}</td>
-
-
-    <td>
-        {% company.status == "200" %}
-        <img src="{{ site.url }}/enginered/assets/img/green.svg" alt="ok" width="16" height="16">
-        {% endif %}
-    </td>
+    <td><img src="{{ site.url }}/enginered/assets/img/green.svg" alt="{{ company.status }}" width="16" height="16"></td>
   </tr>
   {% endfor %}
 </table>
