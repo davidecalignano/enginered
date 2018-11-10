@@ -4,7 +4,6 @@ title: Home
 ---
 <h3>Status</h3>
 
-
 <table>
   <tr>
     <th>Company</th>
@@ -15,9 +14,9 @@ title: Home
   {% for company in site.data.companies.companies %}
   <tr>
     <td><b>{{ company.name }}</b></td>
-    <td><a href="{{ company.url }}">RSS</td>
-    <td>{{ company.updated }}</td>
-    <td><img src="{{ site.url }}/enginered/assets/img/green.svg" alt="ok" width="16" height="16"></td>
+    <td><a href="{{ company.feed }}">RSS</td>
+    <td>{{ company.updated | date: "%-d %B %Y %R"}}</td>
+    <td><img src="{{ site.url }}/enginered/assets/img/{{ company.status === 200 ? 'green' : 'red' }}.svg" alt="ok" width="16" height="16"></td>
   </tr>
   {% endfor %}
 </table>
