@@ -2,7 +2,7 @@
   "name": "Enginered",
   "description": "The best tech post from the best tech companies",
   "repository": "https://github.com/davidecalignano/Enginered",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-getting-started/public/node.svg",
   "keywords": ["enginered", "feeds", "rss", "tech", "blogs", "engineering"],
   "image": "heroku/nodejs"
 }
