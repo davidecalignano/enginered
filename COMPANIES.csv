@@ -26,3 +26,4 @@ flickr,FlickrAPI,http://code.flickr.net/feed/,http://code.flickr.net/
 tumblr,tumblreng,http://engineering.tumblr.com/rss,https://engineering.tumblr.com/
 foursquare,foursquare,https://medium.com/feed/foursquare-direct/tagged/engineering,https://medium.com/foursquare-direct/tagged/engineering
 github,GitHubEng,http://githubengineering.com/atom.xml,https://githubengineering.com/
+pimentaGROUP,pimentagroup,https://pimentagroup.de/,https://recruiting.pimentagroup.de/
