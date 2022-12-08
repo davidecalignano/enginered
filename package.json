@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "byid": "^0.1.4",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "express-jwt": "^6.0.0",
     "express-jwt-authz": "^1.0.0",
     "feedparser-promised": "^1.5.0",
